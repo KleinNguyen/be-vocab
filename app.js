@@ -8,7 +8,8 @@ const app = express()
 //import mongoose library
 const mongoose = require('mongoose')
 // declare database connection string (URL)
-const database_url = "mongodb://localhost:27017/vocab-builder"
+// const database_url = "mongodb://localhost:27017/vocab-builder"
+const cloud_db = "mongodb+srv://huongnguyen:tuanty@mydbcluster.xkgc6eu.mongodb.net/vocab-builder"
 // connect to db
 mongoose.connect(database_url)
 //connect succeed
@@ -41,7 +42,7 @@ router(app)
 
 // start server
 // declare server port
-const port = 3000
+const port = process.env.PORT || 3001
 // listen to port to start server
 app.listen(port, ()=>{
     console.log('Server is running http/localhost:' + port)

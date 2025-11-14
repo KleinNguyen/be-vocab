@@ -28,9 +28,9 @@ const cors = require('cors')
 // option 2: enable CORS for specific client (private - longer code but more secured)
 const corsOption = {
     // A: only 1 origin (URL)
-    origin: "http://localhost:8080", // allow on this origin
+    // origin: "http://localhost:8080", // allow on this origin
     // B: many origins
-    // origin: ["http://localhost:8080, https://vocab-client.com"]
+    origin: "https://be-vocab-2.vercel.app"
     optionSuccessStatus: 200 // for legacy browser supper
 }
 app.use(cors(corsOption));

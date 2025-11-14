@@ -24,16 +24,9 @@ app.use(express.json())
 // import cors library
 const cors = require('cors')
 //option 1: enable CORS for all client (public : short but unsecured)
-// app.user(cors())
+app.use(cors())
 // option 2: enable CORS for specific client (private - longer code but more secured)
-const corsOption = {
-    // A: only 1 origin (URL)
-    // origin: "http://localhost:8080", // allow on this origin
-    // B: many origins
-    origin: "https://be-vocab-2.vercel.app"
-    optionSuccessStatus: 200 // for legacy browser supper
-}
-app.use(cors(corsOption));
+//app.use(cors(corsOption));
 // route (router)
 //import route
 const router =  require('./api/routes/vocabRoute')

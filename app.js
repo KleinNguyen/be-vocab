@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
 // const database_url = "mongodb://localhost:27017/vocab-builder"
 const cloud_db = "mongodb+srv://huongnguyen:tuanty@mydbcluster.xkgc6eu.mongodb.net/vocab-builder"
 // connect to db
-mongoose.connect(database_url)
+mongoose.connect(cloud_db)
 //connect succeed
 .then(()=>console.log('Connect to DB succeed'))
 // connect failed
